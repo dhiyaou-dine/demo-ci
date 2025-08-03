@@ -1,5 +1,4 @@
-# .github/workflows/ci.yml
-name: .NET Build & Test
+name: .NET CI (DemoApp)
 
 on:
   push:
@@ -8,11 +7,11 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Setup .NET
@@ -20,12 +19,23 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
-      - name: Restore dependencies
+      - name: Restore dependencies (DemoApp)
+        working-directory: DemoApp
         run: dotnet restore
 
-      - name: Build
+      - name: Build project (DemoApp)
+        working-directory: DemoApp
+        run: dotnet build --no-restore
+
+      - name: Restore dependencies (Tests)
+        working-directory: DemoApp.Tests
+        run: dotnet restore
+
+      - name: Build tests (DemoApp.Tests)
+        working-directory: DemoApp.Tests
         run: dotnet build --no-restore
 
       - name: Run tests
+        working-directory: DemoApp.Tests
         run: dotnet test --no-build --verbosity normal
 
