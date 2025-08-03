@@ -1,0 +1,15 @@
+/home/ahmed/projetDevops/demo-CI/DemoApp/bin/Debug/net8.0/DemoApp
+/home/ahmed/projetDevops/demo-CI/DemoApp/bin/Debug/net8.0/DemoApp.deps.json
+/home/ahmed/projetDevops/demo-CI/DemoApp/bin/Debug/net8.0/DemoApp.runtimeconfig.json
+/home/ahmed/projetDevops/demo-CI/DemoApp/bin/Debug/net8.0/DemoApp.dll
+/home/ahmed/projetDevops/demo-CI/DemoApp/bin/Debug/net8.0/DemoApp.pdb
+/home/ahmed/projetDevops/demo-CI/DemoApp/obj/Debug/net8.0/DemoApp.GeneratedMSBuildEditorConfig.editorconfig
+/home/ahmed/projetDevops/demo-CI/DemoApp/obj/Debug/net8.0/DemoApp.AssemblyInfoInputs.cache
+/home/ahmed/projetDevops/demo-CI/DemoApp/obj/Debug/net8.0/DemoApp.AssemblyInfo.cs
+/home/ahmed/projetDevops/demo-CI/DemoApp/obj/Debug/net8.0/DemoApp.csproj.CoreCompileInputs.cache
+/home/ahmed/projetDevops/demo-CI/DemoApp/obj/Debug/net8.0/DemoApp.sourcelink.json
+/home/ahmed/projetDevops/demo-CI/DemoApp/obj/Debug/net8.0/DemoApp.dll
+/home/ahmed/projetDevops/demo-CI/DemoApp/obj/Debug/net8.0/refint/DemoApp.dll
+/home/ahmed/projetDevops/demo-CI/DemoApp/obj/Debug/net8.0/DemoApp.pdb
+/home/ahmed/projetDevops/demo-CI/DemoApp/obj/Debug/net8.0/DemoApp.genruntimeconfig.cache
+/home/ahmed/projetDevops/demo-CI/DemoApp/obj/Debug/net8.0/ref/DemoApp.dll
