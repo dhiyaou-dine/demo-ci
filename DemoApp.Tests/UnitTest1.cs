@@ -12,7 +12,7 @@ namespace DemoApp.Tests
             int result = Program.Add(2, 3);
             Assert.AreEqual(5, result);
             int result2 = Program.Add(5,5);
-            Assert.AreEqual(10, result);
+            Assert.AreEqual(10, result2);
         }
     }
 }
