@@ -11,10 +11,11 @@ jobs:
     runs-on: ubuntu-latest
 
     strategy:
-      continue-on-error: true 
       matrix:
         dotnet-version: ['6.0.x', '7.0.x', '8.0.x']
 
+    
+    continue-on-error: true 
     name: Build and test on .NET ${{ matrix.dotnet-version }}
 
     steps:
