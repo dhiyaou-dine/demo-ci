@@ -1,0 +1,50 @@
+trigger:
+  branches:
+    include:
+      - main
+
+pr:
+  branches:
+    include:
+      - main
+
+strategy:
+  matrix:
+    net6:
+      DOTNET_VERSION: '6.0.x'
+    net7:
+      DOTNET_VERSION: '7.0.x'
+    net8:
+      DOTNET_VERSION: '8.0.x'
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- checkout: self
+
+- task: UseDotNet@2
+  displayName: 'Install .NET SDK $(DOTNET_VERSION)'
+  inputs:
+    packageType: 'sdk'
+    version: '$(DOTNET_VERSION)'
+
+- script: dotnet restore
+  workingDirectory: DemoApp
+  displayName: 'Restore dependencies (DemoApp)'
+
+- script: dotnet build --no-restore
+  workingDirectory: DemoApp
+  displayName: 'Build (DemoApp)'
+
+- script: dotnet restore
+  workingDirectory: DemoApp.Tests
+  displayName: 'Restore dependencies (DemoApp.Tests)'
+
+- script: dotnet build --no-restore
+  workingDirectory: DemoApp.Tests
+  displayName: 'Build (DemoApp.Tests)'
+
+- script: dotnet test --no-build --verbosity normal
+  workingDirectory: DemoApp.Tests
+  displayName: 'Run Tests'
